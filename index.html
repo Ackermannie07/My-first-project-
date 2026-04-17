@@ -52,10 +52,12 @@
             color: white;
             font-size: 16px;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         button:hover {
             background-color: #d726e8;
+            transform: scale(1.05);
         }
     </style>
 
@@ -71,13 +73,22 @@
 
         <p>This is my first styled website</p>
 
-        <p>I am learning step by step 😼</p>
+        <p id="message">I am learning step by step 😼</p>
 
-        <button onclick="alert('Nice! You clicked the button 😎')">
+        <button onclick="changeText()">
             Click me
         </button>
     
     </div>
+
+    <script>
+        function changeText() {
+            let text = document.getElementById("message");
+
+            text.innerText = "Now I am improving my website!";
+            tetx.style.color = "#E46BEF";
+        }
+    </script>
 
 </body>
 </html>
