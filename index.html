@@ -82,11 +82,20 @@
     </div>
 
     <script>
+        let changed = false;
+
         function changeText() {
             let text = document.getElementById("message");
 
-            text.innerText = "Now I am improving my website!";
-            tetx.style.color = "#E46BEF";
+            if (changed === false) {
+                text.innerText = "Now I am improving my website!";
+                text.style.color = "#E46BEF";
+                changed = true;
+            } else {
+                text.innerText = "I am learning step by step 😼";
+                text.style.color = "#4B004B";
+                changed = false;
+            }  
         }
     </script>
 
