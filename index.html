@@ -67,7 +67,7 @@
 
     <div class="card">
 
-        <img src="Kurt.jpeg" alt="My photo">
+        <img id="profileImage" src="Kurt.jpeg" alt="My photo">
 
         <h1>Welcome to my website 🤗</h1>
 
@@ -75,7 +75,7 @@
 
         <p id="message">I am learning step by step 😼</p>
 
-        <button onclick="changeText()">
+        <button onclick="toggleProfile()">
             Click me
         </button>
     
@@ -84,8 +84,9 @@
     <script>
         let changed = false;
 
-        function changeText() {
+        function toggleProfile() {
             let text = document.getElementById("message");
+            let image = document.getElementById("profileImage");
 
             if (changed === false) {
                 text.innerText = "Now I am improving my website!";
@@ -93,13 +94,17 @@
 
                 document.body.style.backgroundColor = "#E46BEF";
 
+                image.src = "Kurt2.jpeg";
+
                 changed = true;
             } else {
                 text.innerText = "I am learning step by step 😼";
                 text.style.color = "#4B004B";
 
                 document.body.style.backgroundColor = "#FCCEE8";
-                
+
+                image.src = "Kurt.jpeg";
+
                 changed = false;
             }  
         }
