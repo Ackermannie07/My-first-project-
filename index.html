@@ -75,7 +75,7 @@
 
         <p id="message">I am learning step by step 😼</p>
 
-        <button onclick="toggleProfile()">
+        <button id="mainButton" onclick="toggleProfile()">
             Click me
         </button>
     
@@ -87,14 +87,17 @@
         function toggleProfile() {
             let text = document.getElementById("message");
             let image = document.getElementById("profileImage");
+            let button = document.getElementById("mainButton");
 
             if (changed === false) {
                 text.innerText = "Now I am improving my website!";
                 text.style.color = "#E46BEF";
-
+                
                 document.body.style.backgroundColor = "#E46BEF";
 
                 image.src = "Kurtis.jpeg";
+
+                button.innerText = "Go back";
 
                 changed = true;
             } else {
@@ -104,6 +107,8 @@
                 document.body.style.backgroundColor = "#FCCEE8";
 
                 image.src = "Kurt.jpeg";
+
+                button.innerText = "Click me";
 
                 changed = false;
             }  
