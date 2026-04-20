@@ -63,7 +63,7 @@
         #extraText {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.5s;
+            transition: opacity 0.5s, transform 0.5s;
         }
     </style>
 
@@ -85,7 +85,7 @@
             Click me
         </button>
 
-        <p id="extraText" style="display: none;">
+        <p id="extraText">
                 This is my secret message! 🤫
         </p>
     
@@ -111,6 +111,7 @@
                 button.innerText = "Go back";
 
                 extra.style.opacity = "1";
+                extra.style.transform = "translateY(0)";
 
                 changed = true;
             } else {
@@ -124,6 +125,7 @@
                 button.innerText = "Click me";
 
                 extra.style.opacity = "0";
+                extra.style.transform = "translateY(20px)";
 
                 changed = false;
             }  
