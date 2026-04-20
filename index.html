@@ -59,6 +59,12 @@
             background-color: #d726e8;
             transform: scale(1.05);
         }
+
+        #extraText {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s;
+        }
     </style>
 
 </head>
@@ -104,7 +110,7 @@
 
                 button.innerText = "Go back";
 
-                extra.style.display = "block";
+                extra.style.opacity = "1";
 
                 changed = true;
             } else {
@@ -117,7 +123,7 @@
 
                 button.innerText = "Click me";
 
-                extra.style.display = "none";
+                extra.style.opacity = "0";
 
                 changed = false;
             }  
