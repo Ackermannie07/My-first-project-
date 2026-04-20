@@ -78,6 +78,10 @@
         <button id="mainButton" onclick="toggleProfile()">
             Click me
         </button>
+
+        <p id="extraText" style="display: none;">
+                This is my secret message! 🤫
+        </p>
     
     </div>
 
@@ -88,6 +92,7 @@
             let text = document.getElementById("message");
             let image = document.getElementById("profileImage");
             let button = document.getElementById("mainButton");
+            let extra = document.getElementById("extraText");
 
             if (changed === false) {
                 text.innerText = "Now I am improving my website!";
@@ -99,6 +104,8 @@
 
                 button.innerText = "Go back";
 
+                extra.style.display = "block";
+
                 changed = true;
             } else {
                 text.innerText = "I am learning step by step 😼";
@@ -109,6 +116,8 @@
                 image.src = "Kurt.jpeg";
 
                 button.innerText = "Click me";
+
+                extra.style.display = "none";
 
                 changed = false;
             }  
